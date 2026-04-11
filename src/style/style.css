@@ -6,7 +6,8 @@
     --text-color: #333D29;
 
     /* Дополнительные цвета */
-    --header-text-color: #FFF9F0;
+    --text-color-alt: #FFF9F0;
+    --text-color-accent: #FFB306;
 }
 
 @font-face {
@@ -27,5 +28,12 @@
     font-family: 'Inter-ExtraBold';
     src: url('../font/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProstoOne';
+    src: url('../font/ProstoOne/ProstoOne-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
