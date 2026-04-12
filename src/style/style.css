@@ -18,6 +18,13 @@
 }
 
 @font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Inter';
     src: url('../font/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: normal;
