@@ -121,19 +121,18 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    cursor: pointer;
-}
-
-.ls1 {
-    background-image: url("../image/icons/telegram.svg");
 }
 
 .ls2 {
-    background-image: url("../image/icons/vk.svg");
+    background-image: url("../image/icons/russian_quality.svg");
 }
 
 .ls3 {
-    background-image: url("../image/icons/gmail.svg");
+    background-image: url("../image/icons/bez-gmo.svg");
+}
+
+.ls1 {
+    background-image: url("../image/icons/znak.svg");
 }
 
 .footer-info {
@@ -180,6 +179,26 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+}
+
+.footer-cont .footer-h1 {
+    margin-bottom: 35px;
+}
+
+.footer-cont a {
+    align-items: center;
+}
+
+.footer-cont a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    margin-bottom: 19px;
+}
+
+.footer-cont a img {
+    height: 30px;
+    width: 30px;
 }
 
 @font-face {
