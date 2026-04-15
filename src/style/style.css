@@ -5,6 +5,11 @@
     --background: #FFF9F0;
     --text-color: #333D29;
 
+    /* Цвета состояния */
+    --success: #5C8C67;
+    --fail: #C04B37;
+    --hover: #355A3B;
+
     /* Дополнительные цвета */
     --text-color-alt: #FFF9F0;
     --text-color-accent: #FFB306;
