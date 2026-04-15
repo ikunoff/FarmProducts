@@ -1,0 +1,153 @@
+@import "style.css";
+
+.titles {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    gap: 112px;
+}
+
+.title {
+    font-family: ProstoOne, sans-serif;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.t1 {
+    color: rgba(68, 115, 75, 0.8);
+}
+
+.t2 {
+    color: rgba(68, 115, 75, 0.4);
+}
+
+.t3 {
+    color: rgba(68, 115, 75, 0.1);
+}
+
+.info {
+    display: flex;
+    align-content: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.map {
+    margin-left: 70px;
+    border: 7px solid rgba(68, 115, 75, 0.5);
+    border-radius: 20px;
+}
+
+.content {
+    display: grid;
+    width: 760px;
+    height: 435px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: var(--background);
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+.content-h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.content-h2:last-child {
+    margin-bottom: 0;
+}
+
+.formcontact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.form {
+    background-color: var(--primary-color);
+    width: 1760px;
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.ftitle {
+    color: var(--background);
+    font-family: ProstoOne, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+    background-color: var(--background);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.form-inputs input::placeholder,
+.form-inputs textarea::placeholder {
+    color: rgba(68, 115, 75, 0.7);
+}
+
+.fmessage {
+    grid-column: span 3;
+    height: 150px;
+    resize: none;
+}
+
+.fbutton {
+    background-color: #E2A621;
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.fbutton:hover {
+    opacity: 0.85;
+}
+
+.form-inputs input:not(:placeholder-shown):invalid,
+.form-inputs textarea:not(:placeholder-shown):invalid {
+    outline: 2px solid var(--fail);
+    color: var(--fail);
+}
+
+.form-inputs input:not(:placeholder-shown):valid,
+.form-inputs textarea:not(:placeholder-shown):valid {
+    outline: 2px solid var(--success);
+}
