@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фермерские продукты - Оформление заказа</title>
+    <link rel="stylesheet" href="../style/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html"><div class="header-logo"></div></a>
+        <div class="header-title">
+            <a href="../../index.html"><nav>главная</nav></a>
+            <a href="./gallery.html"><nav>галерея</nav></a>
+            <a href="./catalog.html"><nav>каталог</nav></a>
+            <a href="./contact.html"><nav>контакты</nav></a>
+        </div>
+        <a href="#" class="header-login" id="openLogin"></a>
+    </header>
+    <main class="checkout-page">
+        <div class="checkout-header-main">
+            Оформление заказа
+        </div>
+        <div class="checkout-grid">
+            <div class="checkout-form-section">
+                <div class="form-group">
+                    <h3>Получатель</h3>
+                    <input type="text" placeholder="ФИО" class="custom-input">
+                    <input type="tel" placeholder="Номер телефона" class="custom-input">
+                    <input type="email" placeholder="E-mail" class="custom-input">
+                </div>
+
+                <div class="form-group">
+                    <h3>Способ оплаты</h3>
+                    <button class="payment-method-btn">
+                        Добавить карту
+                    </button>
+                    <button class="payment-method-btn">
+                        Оплата по СБП
+                    </button>
+                </div>
+                <div class="form-group">
+                    <h3>Доставка курьером</h3>
+                    <input type="text" placeholder="Адрес: город, улица, дом" class="custom-input">
+                    <div class="address-details">
+                        <input type="text" placeholder="Подъезд" class="custom-input">
+                        <input type="text" placeholder="Этаж" class="custom-input">
+                        <input type="text" placeholder="Квартира" class="custom-input">
+                        <input type="text" placeholder="Домофон" class="custom-input">
+                    </div>
+                    <input type="text" placeholder="Дата:" class="custom-input">
+                </div>
+                <div class="form-group order-summary-section">
+                    <h3>Ваш заказ</h3>
+                    <hr class="summary-divider">
+                    <div class="summary-line">
+                        <span>Общий вес</span>
+                        <span>0 кг</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Доставка</span>
+                        <span>бесплатно</span>
+                    </div>
+                    <div class="summary-line discount">
+                        <span>Скидка</span>
+                        <span>0 ₽</span>
+                    </div>
+                    <hr class="summary-divider">
+                    <div class="summary-total">
+                        <span>Итого</span>
+                        <span>0 ₽</span>
+                    </div>
+                    <div class="legal-text">
+                        Оформляя заказ Вы соглашаетесь с <a href="#">офертой</a> и <a href="#">политикой конфиденциальности</a>
+                    </div>
+                    <button class="submit-order-btn">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="cart-section">
+                <div class="cart-header">
+                    <h3>Корзина</h3>
+                    <button class="clear-cart-btn">
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4H13M4.33333 4V2C4.33333 1.44772 4.78105 1 5.33333 1H8.66667C9.21895 1 9.66667 1.44772 9.66667 2V4M2.66667 4V13C2.66667 14.1046 3.5621 15 4.66667 15H9.33333C10.4379 15 11.3333 14.1046 11.3333 13V4M5.66667 7.5V11.5M8.33333 7.5V11.5" stroke="#333D29" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Очистить
+                    </button>
+                </div>
+                <hr class="cart-main-hr">
+                <div class="cart-list" id="cartContainer"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-lable">
+            <div class="footer-la"></div>
+            <div class="footer-ln">Фермерские продукты</div>
+            <div class="footer-ld">Ваш надёжный партнёр в мире путешествий с 2015 года.</div>
+            <div class="footer-ls">
+                <div class="ls1"></div>
+                <div class="ls2"></div>
+                <div class="ls3"></div>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="footer-nav">
+                <div class="footer-h1">Навигация</div>
+                <a href="../../index.html" class="footer-link">ГЛАВНАЯ</a>
+                <a href="./gallery.html" class="footer-link">ГАЛЕРЕЯ</a>
+                <a href="./catalog.html" class="footer-link">КАТАЛОГ</a>
+                <a href="./contact.html" class="footer-link">КОНТАКТЫ</a>
+            </div>
+            <div class="footer-cont">
+                <div class="footer-h1">Контакты</div>
+                <a class="footer-link"><img src="../image/icons/phone.svg" alt="phone">+7 928 735 34 56</a>
+                <a class="footer-link"><img src="../image/icons/phone.svg" alt="phone">+7 909  965 69 00</a>
+                <a class="footer-link"><img src="../image/icons/vk.svg" alt="vk">vk.com/@fructoo</a>
+                <a class="footer-link"><img src="../image/icons/gmail.svg" alt="mail">fructoo@gmail.com</a>
+            </div>
+            <div class="footer-address">
+                <div class="footer-h1">Адреса</div>
+                <a class="footer-link">Краснодар, улица Ленина, 185 </a>
+                <a class="footer-link">Москва, улица Пушкина, 144</a>
+                <a class="footer-link">Грозный, улица Чехова, 99</a>
+                <a class="footer-link">Ростов, улица Весенняя, 198</a>
+            </div>
+            <div class="footer-time">
+                <div class="footer-h1">График работы</div>
+                <a class="footer-link">пн, вт, ср, чт<span>5:00 - 20:00</span></a>
+                <a class="footer-link">пт, сб<span>7:00 - 18:00</span></a>
+                <a class="footer-link">вс<span>8:00 - 16:00</span></a>
+            </div>
+        </div>
+    </footer>
+    <div id="login" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-h1">Добро пожаловать в Фермерские продукты</div>
+            <div class="modal-h3">Нет аккаунта? <a href="#" id="toRegisterBtn">Бесплатная регистрация</a></div>
+            <div class="modal-socials">
+                <div class="modal-social">
+                    <div class="modal-icon m1"></div>
+                    <div class="modal-title">Войти с Google</div>
+                </div>
+                <div class="modal-social">
+                    <div class="modal-icon m1"></div>
+                    <div class="modal-title">Войти с VK</div>
+                </div>
+            </div>
+            <div class="modal-h3">или войдите с помощью электронной почты:</div>
+            <div class="modal-form">
+                <input class="modal-input" id="loginEmail" type="email" placeholder="Почта">
+                <input class="modal-input" id="loginPass" type="password" placeholder="Введите пароль">
+                <button class="modal-submit" id="loginSubmit">Войти</button>
+            </div>
+            <div class="modal-h3"><a href="#">Сбросить пароль</a></div>
+            <div class="modal-h3">Войдя в систему, вы соглашаетесь с <a href="#">"Условиями использования"</a> и <a href="#">"Политикой конфиденциальности"</a></div>
+        </div>
+    </div>
+    <div id="register" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-h1">Бесплатная регистрация</div>
+            <div class="modal-h3">Уже есть аккаунт? <a href="#" id="toLoginBtn">Войти</a></div>
+
+            <div class="modal-socials">
+                <div class="modal-social">
+                    <div class="modal-icon m1" style="background-image: url('../image/icons/google.svg');"></div>
+                    <div class="modal-title">Google регистрация</div>
+                </div>
+                <div class="modal-social">
+                    <div class="modal-icon m1" style="background-image: url('../image/icons/vk_color.svg');"></div>
+                    <div class="modal-title">VK регистрация</div>
+                </div>
+            </div>
+
+            <div class="modal-h3">или Зарегистрироваться с помощью электронной почты:</div>
+
+            <div class="modal-form">
+                <input class="modal-input" id="regEmail" type="email" placeholder="Почта">
+                <input class="modal-input" id="regPass" type="password" placeholder="Введите пароль">
+                <button class="modal-submit" id="regSubmit">Создать</button>
+            </div>
+
+            <div class="modal-h3">Регистрируясь вы соглашаетесь с <br><a href="#">"Условиями использования"</a> и <a href="#">"Политикой конфиденциальности"</a></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const paymentBtns = document.querySelectorAll('.payment-method-btn');
+
+            paymentBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    paymentBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

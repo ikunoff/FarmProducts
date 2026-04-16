@@ -182,3 +182,59 @@
     width: 18px;
     height: 16px;
 }
+
+.floating-cart {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 65px;
+    height: 65px;
+    background-color: #44734B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #FFF9F0;
+    text-decoration: none;
+}
+
+.floating-cart:hover {
+    transform: scale(1.08);
+    background-color: #355A3B;
+}
+
+.floating-cart svg {
+    width: 32px;
+    height: 32px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background-color: #E0A82B;
+    color: white;
+    font-size: 13px;
+    font-family: 'Inter-ExtraBold', sans-serif;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFF9F0;
+}
+
+.card-button.in-cart {
+    background-color: #E0A82B;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button.in-cart .icon {
+    opacity: 0.8;
+}
