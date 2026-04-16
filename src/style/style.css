@@ -219,6 +219,81 @@ footer {
     width: 30px;
 }
 
+/* --- Стили для размытого фона (оверлея) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Полупрозрачный темный фон */
+
+    /* Магия блюра */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Для поддержки Safari */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    /* Скрываем по умолчанию, но оставляем возможность анимации */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+/* --- Стили самого окошка --- */
+.modal-window {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    /* Анимация выплывания снизу */
+    transform: translateY(50px);
+    transition: all 0.4s ease;
+}
+
+/*!* --- МАГИЯ ОТКРЫТИЯ --- *!*/
+/*!* Когда хэш в URL совпадает с id (#myModal) *!*/
+/*.modal-overlay:target {*/
+/*    opacity: 1;*/
+/*    visibility: visible;*/
+/*}*/
+
+/*!* Выплывание самого окна при открытии *!*/
+/*.modal-overlay:target .modal-window {*/
+/*    transform: translateY(0);*/
+/*}*/
+
+/* --- Кнопка закрытия (крестик) --- */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #888;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay.active .modal-window {
+    transform: translateY(0);
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
