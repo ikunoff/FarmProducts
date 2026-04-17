@@ -101,6 +101,104 @@
     background-position: center;
 }
 
+.filter-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background-color: #4A764F;
+    border-radius: 12px;
+    padding: 20px;
+    color: #FFF9F0;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    min-width: 200px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.region-dropdown {
+    min-width: 250px;
+}
+
+.price-dropdown {
+    min-width: 150px;
+}
+
+.filter-dropdown.active {
+    display: flex;
+}
+
+.filter-dropdown label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.filter-dropdown input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #FFF9F0;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.filter-dropdown input[type="checkbox"]:checked {
+    background-color: transparent;
+}
+
+.filter-dropdown input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF9F0;
+    font-size: 12px;
+}
+
+.price-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price-input input[type="number"] {
+    background-color: #FFF9F0;
+    border: none;
+    border-radius: 8px;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-button.active .filter-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.filter-icon {
+    transition: transform 0.3s ease;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 300px);

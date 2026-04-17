@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/login.js" defer></script>
     <script src="../js/catalog.js" defer></script>
+    <script src="../js/filter.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,25 +29,69 @@
     </section>
     <section class="catalog">
         <div class="filters">
-            <div class="filter-button">
-                <div class="filter-title">Категория</div>
-                <div class="filter-icon"></div>
+            <div class="filter-wrapper">
+                <div class="filter-button">
+                    <div class="filter-title">Категория</div>
+                    <div class="filter-icon"></div>
+                </div>
+                <div class="filter-dropdown">
+                    <label><input type="checkbox" value="Мясо" data-filter="category">Мясо</label>
+                    <label><input type="checkbox" value="Мед" data-filter="category">Мед</label>
+                    <label><input type="checkbox" value="Овощи" data-filter="category">Овощи</label>
+                    <label><input type="checkbox" value="Фрукты" data-filter="category">Фрукты</label>
+                    <label><input type="checkbox" value="Яйца" data-filter="category">Яйца</label>
+                    <label><input type="checkbox" value="Сыр" data-filter="category">Сыр</label>
+                </div>
             </div>
-            <div class="filter-button">
-                <div class="filter-title">Цена, ₽</div>
-                <div class="filter-icon"></div>
+
+            <div class="filter-wrapper">
+                <div class="filter-button">
+                    <div class="filter-title">Цена, ₽</div>
+                    <div class="filter-icon"></div>
+                </div>
+                <div class="filter-dropdown price-dropdown">
+                    <div class="price-input">
+                        <label>От</label>
+                        <input type="number" id="price-min" placeholder="0">
+                    </div>
+                    <div class="price-input">
+                        <label>До</label>
+                        <input type="number" id="price-max" placeholder="9999">
+                    </div>
+                </div>
             </div>
-            <div class="filter-button">
-                <div class="filter-title">Фермер</div>
-                <div class="filter-icon"></div>
+
+            <div class="filter-wrapper">
+                <div class="filter-button">
+                    <div class="filter-title">Фермер</div>
+                    <div class="filter-icon"></div>
+                </div>
+                <div class="filter-dropdown">
+                    <label><input type="checkbox" value="Алёна" data-filter="farmer">Алёна</label>
+                    <label><input type="checkbox" value="Арам" data-filter="farmer">Арам</label>
+                    <label><input type="checkbox" value="Иван" data-filter="farmer">Иван</label>
+                    <label><input type="checkbox" value="Полина" data-filter="farmer">Полина</label>
+                    <label><input type="checkbox" value="Олег" data-filter="farmer">Олег</label>
+                    <label><input type="checkbox" value="Руслан" data-filter="farmer">Руслан</label>
+                </div>
             </div>
-            <div class="filter-button f1">
-                <div class="filter-title">Регион</div>
-                <div class="filter-icon"></div>
+
+            <div class="filter-wrapper">
+                <div class="filter-button f1">
+                    <div class="filter-title">Регион</div>
+                    <div class="filter-icon"></div>
+                </div>
+                <div class="filter-dropdown region-dropdown">
+                    <label><input type="checkbox" value="Россия" data-filter="region">Россия</label>
+                    <label><input type="checkbox" value="Беларусь" data-filter="region">Беларусь</label>
+                    <label><input type="checkbox" value="Азербайджан" data-filter="region">Азербайджан</label>
+                    <label><input type="checkbox" value="Турция" data-filter="region">Турция</label>
+                    <label><input type="checkbox" value="Армения" data-filter="region">Армения</label>
+                </div>
             </div>
         </div>
         <div class="cards">
-            <div class="card">
+            <div class="card" data-category="Сыр" data-price="749" data-farmer="Олег" data-region="Беларусь">
                 <div class="card-img c1"></div>
                 <div class="card-info">
                     <div class="card-title">Сыр Чеддер</div>
@@ -58,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="559" data-farmer="Полина" data-region="Россия">
                 <div class="card-img c2"></div>
                 <div class="card-info">
                     <div class="card-title">Овощи ассорти</div>
@@ -70,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="399" data-farmer="Иван" data-region="Россия">
                 <div class="card-img c3"></div>
                 <div class="card-info">
                     <div class="card-title">Молодая картошка</div>
@@ -82,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Мясо" data-price="649" data-farmer="Иван" data-region="Россия">
                 <div class="card-img c4"></div>
                 <div class="card-info">
                     <div class="card-title">Свинина</div>
@@ -94,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Мясо" data-price="849" data-farmer="Арам" data-region="Беларусь">
                 <div class="card-img c5"></div>
                 <div class="card-info">
                     <div class="card-title">Говядина</div>
@@ -106,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Мясо" data-price="350" data-farmer="Олег" data-region="Россия">
                 <div class="card-img c6"></div>
                 <div class="card-info">
                     <div class="card-title">Курица</div>
@@ -118,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="249" data-farmer="Алёна" data-region="Россия">
                 <div class="card-img c7"></div>
                 <div class="card-info">
                     <div class="card-title">Капуста</div>
@@ -130,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукты" data-price="250" data-farmer="Полина" data-region="Беларусь">
                 <div class="card-img c8"></div>
                 <div class="card-info">
                     <div class="card-title">Груша</div>
@@ -142,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукты" data-price="150" data-farmer="Руслан" data-region="Россия">
                 <div class="card-img c9"></div>
                 <div class="card-info">
                     <div class="card-title">Яблоки</div>
@@ -154,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукты" data-price="359" data-farmer="Иван" data-region="Россия">
                 <div class="card-img c10"></div>
                 <div class="card-info">
                     <div class="card-title">Апельсины</div>
@@ -166,7 +211,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукты" data-price="549" data-farmer="Олег" data-region="Азербайджан">
                 <div class="card-img c11"></div>
                 <div class="card-info">
                     <div class="card-title">Вишня</div>
@@ -178,7 +223,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card"  data-category="Яйца" data-price="400" data-farmer="Полина" data-region="Россия">
                 <div class="card-img c12"></div>
                 <div class="card-info">
                     <div class="card-title">Перепелиные яйца</div>
@@ -190,7 +235,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукты" data-price="119" data-farmer="Арам" data-region="Турция">
                 <div class="card-img c13"></div>
                 <div class="card-info">
                     <div class="card-title">Бананы</div>
@@ -202,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="79" data-farmer="Руслан" data-region="Россия">
                 <div class="card-img c14"></div>
                 <div class="card-info">
                     <div class="card-title">Лук репчатый</div>
@@ -214,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="49" data-farmer="Иван" data-region="Россия">
                 <div class="card-img c15"></div>
                 <div class="card-info">
                     <div class="card-title">Лук зеленый</div>
@@ -226,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Мед" data-price="7049" data-farmer="Олег" data-region="Россия">
                 <div class="card-img c16"></div>
                 <div class="card-info">
                     <div class="card-title">Мёд</div>
@@ -238,7 +283,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Яйца" data-price="129" data-farmer="Алёна" data-region="Россия">
                 <div class="card-img c17"></div>
                 <div class="card-info">
                     <div class="card-title">Яйца</div>
@@ -250,7 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="229" data-farmer="Полина" data-region="Турция">
                 <div class="card-img c18"></div>
                 <div class="card-info">
                     <div class="card-title">Перец болгарский</div>
@@ -262,7 +307,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="59" data-farmer="Алёна" data-region="Беларусь">
                 <div class="card-img c19"></div>
                 <div class="card-info">
                     <div class="card-title">Зелень</div>
@@ -274,7 +319,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="299" data-farmer="Арам" data-region="Россия">
                 <div class="card-img c20"></div>
                 <div class="card-info">
                     <div class="card-title">Помидоры</div>
@@ -286,7 +331,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="399" data-farmer="Олег" data-region="Турция">
                 <div class="card-img c21"></div>
                 <div class="card-info">
                     <div class="card-title">Огурцы</div>
@@ -298,7 +343,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="749" data-farmer="Олег" data-region="Россия">
                 <div class="card-img c22"></div>
                 <div class="card-info">
                     <div class="card-title">Соленья</div>
@@ -310,7 +355,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукт" data-price="159" data-farmer="Арам" data-region="Россия">
                 <div class="card-img c23"></div>
                 <div class="card-info">
                     <div class="card-title">Арбузы</div>
@@ -322,7 +367,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукт" data-price="199" data-farmer="Полина" data-region="Россия">
                 <div class="card-img c24"></div>
                 <div class="card-info">
                     <div class="card-title">Лимон</div>
@@ -334,7 +379,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукт" data-price="749" data-farmer="Алёна" data-region="Россия">
                 <div class="card-img c25"></div>
                 <div class="card-info">
                     <div class="card-title">Персики</div>
@@ -346,7 +391,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="77" data-farmer="Арам" data-region="Армения">
                 <div class="card-img c26"></div>
                 <div class="card-info">
                     <div class="card-title">Морковка</div>
@@ -358,7 +403,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Фрукт" data-price="749" data-farmer="Полина" data-region="Россия">
                 <div class="card-img c27"></div>
                 <div class="card-info">
                     <div class="card-title">Гранат</div>
@@ -370,7 +415,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="Овощи" data-price="89" data-farmer="Иван" data-region="Россия">
                 <div class="card-img c28"></div>
                 <div class="card-info">
                     <div class="card-title">Свекла</div>
