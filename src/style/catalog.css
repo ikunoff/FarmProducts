@@ -126,7 +126,6 @@
 .card-img {
     height: 170px;
     width: 300px;
-    background-image: url('../image/cards/card-imgs/cheese.webp');
     background-size: cover;
     background-position: center;
     border-radius: 20px 20px 0 0;
@@ -167,7 +166,7 @@
 .card-button {
     height: 49px;
     width: 237px;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
     background-color: var(--button-catalog-color);
     border-radius: 20px;
     display: flex;
@@ -238,3 +237,32 @@
 .card-button.in-cart .icon {
     opacity: 0.8;
 }
+
+.c1 { background-image: url('../image/cards/card-imgs/1.webp'); }
+.c2 { background-image: url('../image/cards/card-imgs/2.webp'); }
+.c3 { background-image: url('../image/cards/card-imgs/4.webp'); }
+.c4 { background-image: url('../image/cards/card-imgs/5.png'); }
+.c5 { background-image: url('../image/cards/card-imgs/6.png'); }
+.c6 { background-image: url('../image/cards/card-imgs/7.png'); }
+.c7 { background-image: url('../image/cards/card-imgs/8.png'); }
+.c8 { background-image: url('../image/cards/card-imgs/9.png'); }
+.c9 { background-image: url('../image/cards/card-imgs/10.png'); }
+.c10 { background-image: url('../image/cards/card-imgs/11.png'); }
+.c11 { background-image: url('../image/cards/card-imgs/12.png'); }
+.c12 { background-image: url('../image/cards/card-imgs/13.png'); }
+.c13 { background-image: url('../image/cards/card-imgs/14.png'); }
+.c14 { background-image: url('../image/cards/card-imgs/15.png'); }
+.c15 { background-image: url('../image/cards/card-imgs/16.png'); }
+.c16 { background-image: url('../image/cards/card-imgs/17.png'); }
+.c17 { background-image: url('../image/cards/card-imgs/18.png'); }
+.c18 { background-image: url('../image/cards/card-imgs/19.png'); }
+.c19 { background-image: url('../image/cards/card-imgs/20.png'); }
+.c20 { background-image: url('../image/cards/card-imgs/21.png'); }
+.c21 { background-image: url('../image/cards/card-imgs/22.png'); }
+.c22 { background-image: url('../image/cards/card-imgs/23.png'); }
+.c23 { background-image: url('../image/cards/card-imgs/24.png'); }
+.c24 { background-image: url('../image/cards/card-imgs/25.png'); }
+.c25 { background-image: url('../image/cards/card-imgs/26.png'); }
+.c26 { background-image: url('../image/cards/card-imgs/27.png'); }
+.c28 { background-image: url('../image/cards/card-imgs/28.png'); }
+.c27 { background-image: url('../image/cards/card-imgs/29.png'); }

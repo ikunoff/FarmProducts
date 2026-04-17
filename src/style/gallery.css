@@ -2,8 +2,8 @@
 
 .titles {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 65px;
+    margin-bottom: 40px;
     justify-content: center;
     gap: 35px;
     box-sizing: border-box;
